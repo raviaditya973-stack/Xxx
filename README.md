@@ -1,1 +1,277 @@
-# Xxx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Media Experience</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --accent-color: #e50914; /* A bold red accent */
+            --text-main: #ffffff;
+            --text-muted: #a1a1a6;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(15, 15, 17, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        .logo span { color: var(--accent-color); }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover { color: var(--text-main); }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #b20710;
+            transform: translateY(-2px);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #2a2a2e 0%, var(--bg-color) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* --- CONTENT GRID --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #333;
+            /* Placeholder for image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #000;
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MEDIA<span>STREAM</span></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Trending</a>
+            <a href="#">Categories</a>
+            <a href="#">Premium</a>
+        </div>
+        <a href="#" class="btn-primary">Join Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Experience the <br>Next Generation</h1>
+        <p>High-quality content, seamless streaming, and a community built for you. Discover what's trending today.</p>
+        <a href="#" class="btn-primary">Start Watching</a>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="container">
+        <h2 class="section-title">Trending Now</h2>
+        
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(45deg, #2b1055, #7597de);">
+                    <!-- Replace with <img> tag -->
+                    [Image Placeholder]
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Featured Collection A</h3>
+                    <div class="card-meta">
+                        <span>12k Views</span>
+                        <span>4.9 ★</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(45deg, #cb2d3e, #ef473a);">
+                    [Image Placeholder]
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Exclusive Content</h3>
+                    <div class="card-meta">
+                        <span>8.5k Views</span>
+                        <span>4.8 ★</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(45deg, #11998e, #38ef7d);">
+                    [Image Placeholder]
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">New Arrivals</h3>
+                    <div class="card-meta">
+                        <span>22k Views</span>
+                        <span>5.0 ★</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(45deg, #833ab4, #fd1d1d);">
+                    [Image Placeholder]
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Premium Series</h3>
+                    <div class="card-meta">
+                        <span>15k Views</span>
+                        <span>4.7 ★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 MediaStream Inc. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">
+            <a href="#" style="color: #666; text-decoration: none;">Privacy Policy</a> | 
+            <a href="#" style="color: #666; text-decoration: none;">Terms of Service</a>
+        </p>
+    </footer>
+
+</body>
+</html>
